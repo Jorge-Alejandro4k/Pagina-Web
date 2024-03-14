@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;/*color de fondo*/
+    color: #fff;/*color de texto*/
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Imagenes/background.jpeg);/*imagen de fondo*/
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;/*margen de la pagina*/
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*dimensiones de los elementos de la pagina*/
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px; /*tamaño del logo*/
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none; /*alineacion de menu*/
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none; /*estilo de los botones de menu*/
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;/*efecto de desplazamiento de botones de menu*/
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{/*efecto de barra de color de botones*/
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%; /*estilo de texto de arriba*/
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px; /*estilo de texto h1*/
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #0000ff; /*estilo de etiqueta para cambio de color*/
+}
+/*-------------------Seccion Sobre Mi--------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;/*estilos generales*/
+}
+.row{
+    display: flex;
+    justify-content: space-between;/*organizacion del contenido*/
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;/*definir el tamaño de la columna 1*/
+}
+.about-col-1 img{
+    width: 80%;
+    border-radius: 15px; /*tamaño y estilo de la imagen*/
+}
+.about-col-2{
+    flex-basis: 60%;/*definir el tamaño de la columna 2*/
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;/*estilo de subtitulo*/
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;/*estilo de las pestañas de Sobre mi*/
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;/*efectos de los titulos de la pestaña*/
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{/*efecto de color*/
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;/*estilo de texto en pestañas*/
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*------------------------seccion servicios------------------------*/
+#servicios{
+    padding: 30px 0;
+}
+.servicios-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*diseño de columnas de servicios*/
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.servicios-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px; /*estilo de las columnas de servicios*/
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.servicios-list div h2{
+    font-size: 30px;
+    font-weight: 500; /*estilo de letra*/
+    margin-bottom: 15px;
+}
+.servicios-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px; /*estilo de boton Saber mas*/
+    margin-top: 20px;
+    display: inline-block;
+}
+.servicios-list div:hover{
+    background: #ff004f; /*efecto de casilla*/
+    transform: translateY(-10px);
+}
+/*-----------------Seccion trabajos-----------------------*/
+#trabajos{
+    padding: 50px 0;/*ajustar la seccion*/
+}
+.trabajo-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*diseño de columnas de servicios*/
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.trabajo{
+    border-radius: 10px;
+    position: relative;/*posicion de columnas*/
+    overflow: hidden;
+}
+.trabajo img{
+    width: 100%;
+    border-radius: 10px;/*dimensiones y diseño de imagenes*/
+    display: block;
+    transition: transform 0.5s; /*duracion de efecto transform*/
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f); /*diseño para las columnas de trabajos*/
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;/*duracion de efecto de texto height*/
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px; /*estilo de boton Saber mas*/
+    margin-top: 20px;
+    display: inline-block;
+}
+.trabajo:hover img{
+    transform: scale(1.1); /*efecto de imagen que ajusta la escala*/
+}
+.trabajo:hover .layer{ /*efecto de aparicion de texto*/
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;/*estilo y diseño del botos ver mas*/
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+.btn:hover{
+    background: #ff004f;/*efecto de color de boton ver mas*/
+}
+/*------------------------------seccion de contacto------------------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/*-------------------------------css for small screens-----------------------------*/
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(Imagenes/fondo\ R.jpeg);
+    }
+    .header-text{
+        margin-top: 100px;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+}

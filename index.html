@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Imagenes/logo.jpeg" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">Sobre mi</a></li> <!--Botones de menu-->
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#trabajos">Trabajos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Programador y editor foto/video</p>
+                <h1>HOLA!, Soy <span>Jorge</span><br>estudiante de ingenieria</h1><!--Titulo de la pagina-->
+            </div>
+        </div>      
+    </div>
+    <!---------------------Seccion Sobre mi-------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Imagenes/foto.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Sobre Mi</h1>
+                    <p>Soy un alumno de la carrera de ingenieria en sistemas computacionales que esta curasando el 5to cuatrimestre, con experiencia en trabajos de la plataforma de Adobe, tales como Photoshop, Adobe Audition, Adobe Premiere Pro, etc. Actualmente estoy adquiriendo conocimientos en bases de datos y programacion usando distinto lenguajes como son Java, SQL, Html y CSS para crear paginas web.</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('habilidades')">Habilidades</p>
+                        <p class="tab-links" onclick="opentab('experiencia')">Experiencia</p>
+                        <p class="tab-links" onclick="opentab('educacion')">Educacion</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="habilidades">
+                        <ul>
+                            <li><span>ISC?EV</span><br>Programador DB/Web sites</li>
+                            <li><span>Desarrollo de Base de Datos</span><br>Administracion de bases de datos en la red</li>
+                            <li><span>Editor Adobe</span><br>Editor de fotos y videos en Adobe</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiencia">
+                        <ul>
+                            <li><span>2020 - 2021</span><br>Editor de videos</li>
+                            <li><span>2021 - 2022</span><br>Creador de logotipos y editor de imagenes</li>
+                            <li><span>2022 - Actualidad</span><br>Estudiante de ingenieria en sistemas</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educacion">
+                        <ul>
+                            <li><span>2017 - 2020</span><br>Escuela Preparatoria Oficial No.173</li>
+                            <li><span>2020 - 2022</span><br>Instituto Tecnologico De Toluca</li>
+                            <li><span>2022 - Actualidad</span><br>Instituto de Estudios Superiores Isima</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------Seccion Servicios----------------------->
+    <div id="servicios">
+        <div class="container">
+            <h1 class="sub-title">Servicios</h1>
+            <div class="servicios-list">
+                <div>
+                    <h2>Diseñador web</h2>
+                    <p>Crear y diseñar todo tipo de sitios web de forma que resulten atractivos y que cumplan con las necesidades del cliente.</p>
+                    <a href="#">Saber mas</a>
+                </div>
+                <div>
+                    <h2>Editor de foto y video</h2>
+                    <p>Tomar el material crudo y transformarlo en un producto final pulido y coherente.</p>
+                    <a href="#">Saber mas</a>
+                </div>
+                <div>
+                    <h2>Programacion</h2>
+                    <p>Escribir codigo con diferentes lenguajes de programacion para proporcionar instrucciones que doten funcionalidad a sistemas operativos.</p>
+                    <a href="#">Saber mas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------Seccion Trabajos--------------->
+    <div id="trabajos">
+        <div class="container">
+            <h1 class="sub-title">Mi Trabajo</h1>
+            <div class="trabajo-list">
+                <div class="trabajo">
+                    <img src="Imagenes/Trabajo1.jpeg">
+                    <div class="layer">
+                        <h3>Programas</h3>
+                        <p>Lista de progrmas creados con completo funcionamiento en diferentes lenguajes de programacion.</p>
+                        <a href="#">Ver</a>
+                    </div>
+                </div>
+                <div class="trabajo">
+                    <img src="Imagenes/Trabajo2.jpeg">
+                    <div class="layer">
+                        <h3>Photoshop</h3>
+                        <p>Galeria de imagenes editadas de manera profesional sin quuitar el realismo y logos de empresas completamente originales.</p>
+                        <a href="#">Ver</a>
+                    </div>
+                </div>
+                <div class="trabajo">
+                    <img src="Imagenes/Trabajo3.jpeg">
+                    <div class="layer">
+                        <h3>Adobe Premiere Pro</h3>
+                        <p>Canal en donde estan todos los videos editados a diferentes creadores donde muestra el trabajo y las capacidades de edicion de audio y video.</p>
+                        <a href="#">Ver</a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">Ver mas</a>
+        </div>
+    </div>
+    <!-------------------------Seccion de contacto------------------->
+    <div id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Informacion de Contacto</h1>
+                    <p>Nombre: Jorge Alejandro Becerril Albarran</p>
+                    <p>Correo: jorgeitor2400@gmail.com</p>
+                    <p>Telefono: +52 7226269942</p>
+                    <p>Facebook: Jorge Becerril</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Jorge. Made by ELFIERRO XD</p>
+        </div>
+    </div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
